@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AGROBALANCE AI | Plataforma de Equilíbrio Rural</title>
+    <meta
+      name="description"
+      content="AGROBALANCE AI simula IoT, análise de dados e inteligência artificial para equilibrar produtividade agrícola e preservação ambiental."
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <div class="app-shell">
+      <header class="topbar" role="banner">
+        <div class="brand" aria-label="AGROBALANCE AI">
+          <span class="brand__mark" aria-hidden="true">AB</span>
+          <div>
+            <h1>AGROBALANCE AI</h1>
+            <p>"Produzir mais não significa produzir melhor."</p>
+          </div>
+        </div>
+
+        <nav class="topbar__nav" aria-label="Navegação principal">
+          <a href="#visao">Visão</a>
+          <a href="#missao">Missão</a>
+          <a href="#centro">Centro</a>
+          <a href="#mapa">Mapa</a>
+          <a href="#simulador">Simulador</a>
+          <a href="#historico">Histórico</a>
+          <a href="#dados">Dados</a>
+        </nav>
+
+        <div class="accessibility-tools" aria-label="Ferramentas de acessibilidade">
+          <button id="contrastToggle" type="button" aria-pressed="false">Contraste</button>
+          <button id="fontDecrease" type="button" aria-label="Reduzir fonte">A-</button>
+          <button id="fontIncrease" type="button" aria-label="Aumentar fonte">A+</button>
+          <button id="topButton" type="button">Topo</button>
+        </div>
+      </header>
+
+      <main id="conteudo">
+        <section id="visao" class="hero" aria-labelledby="hero-title">
+          <div class="hero__content">
+            <p class="eyebrow">Produção e Preservação através da Agricultura Inteligente</p>
+            <h2 id="hero-title">AGROBALANCE AI</h2>
+            <p class="hero__slogan">"Produzir mais não significa produzir melhor."</p>
+            <p class="hero__text">
+              Bem-vindo ao AGROBALANCE AI, uma central inteligente de decisões
+              agrícolas que analisa dados do campo para equilibrar produtividade
+              e preservação.
+            </p>
+            <div class="hero__actions">
+              <a class="primary-link" href="#centro">Acessar Central de Decisões</a>
+              <a class="secondary-link" href="#simulador">Ver Simulação da Fazenda</a>
+            </div>
+            <aside class="visual-control" aria-label="Controle de efeitos visuais">
+              <label for="visualIntensity">Intensidade dos efeitos</label>
+              <input id="visualIntensity" type="range" min="1" max="3" value="2" />
+              <label class="switch-line" for="signalToggle">
+                <input id="signalToggle" type="checkbox" checked />
+                Realçar sinais dos sensores
+              </label>
+            </aside>
+          </div>
+
+          <div class="hero-console" aria-label="Resumo operacional do sistema">
+            <div class="console-header">
+              <span>AGROBALANCE CORE</span>
+              <strong id="heroStatus">Sincronizando sensores</strong>
+            </div>
+            <div class="sensor-orbit" aria-hidden="true">
+              <span class="data-rain data-rain--one"></span>
+              <span class="data-rain data-rain--two"></span>
+              <span class="data-rain data-rain--three"></span>
+              <span class="orbit-node orbit-node--soil">SOLO</span>
+              <span class="orbit-node orbit-node--water">ÁGUA</span>
+              <span class="orbit-node orbit-node--ai">IA</span>
+              <span class="orbit-node orbit-node--bio">BIO</span>
+            </div>
+            <div class="hero-readouts">
+              <span><strong id="heroWater">--</strong> Água</span>
+              <span><strong id="heroBalance">--</strong> Equilíbrio</span>
+              <span><strong id="heroRecords">--</strong> Registros</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="farm-status" aria-labelledby="status-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Painel superior</p>
+              <h2 id="status-title">Status geral da propriedade</h2>
+            </div>
+            <button id="heroDiagnosticButton" type="button">Gerar diagnóstico rápido</button>
+          </div>
+          <div class="status-dashboard" aria-live="polite">
+            <article>
+              <span>Status da Fazenda</span>
+              <strong id="farmStatusValue">Em Observação</strong>
+            </article>
+            <article>
+              <span>Risco Ambiental</span>
+              <strong id="environmentRiskValue">Moderado</strong>
+            </article>
+            <article>
+              <span>Eficiência Hídrica</span>
+              <strong id="waterEfficiencyValue">--</strong>
+            </article>
+            <article class="index-card">
+              <span>Índice AgroBalance</span>
+              <strong id="agroIndexValue">--</strong>
+              <div class="meter"><span id="agroIndexBar"></span></div>
+            </article>
+            <article>
+              <span>Última leitura dos sensores</span>
+              <strong id="lastReadingValue">Agora</strong>
+            </article>
+          </div>
+        </section>
+
+        <section id="missao" class="mission-section" aria-labelledby="mission-title">
+          <div>
+            <p class="eyebrow">Missão do Produtor</p>
+            <h2 id="mission-title">Administre uma fazenda inteligente sem romper o equilíbrio ambiental</h2>
+            <p>
+              Sua missão é manter a produção ativa sem comprometer o solo, a água
+              e a biodiversidade. Cada decisão altera o equilíbrio da propriedade.
+            </p>
+          </div>
+          <div class="mission-goals" aria-label="Objetivos da missão">
+            <article>
+              <strong>Produzir com eficiência</strong>
+              <span>Usar dados para orientar produtividade sem excesso.</span>
+            </article>
+            <article>
+              <strong>Preservar recursos naturais</strong>
+              <span>Proteger água, solo, nascentes e biodiversidade.</span>
+            </article>
+            <article>
+              <strong>Evitar desperdícios e riscos ambientais</strong>
+              <span>Reduzir consumo hídrico e antecipar alertas ambientais.</span>
+            </article>
+          </div>
+        </section>
+
+        <section id="centro" class="control-room" aria-labelledby="control-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">CENTRO DE DECISÕES AGROBALANCE</p>
+              <h2 id="control-title">Núcleo de monitoramento em tempo real</h2>
+            </div>
+            <p class="section-summary">
+              Leituras simuladas mudam automaticamente a cada poucos segundos,
+              como sensores distribuídos por uma propriedade rural conectada.
+            </p>
+          </div>
+
+          <div class="status-strip" aria-live="polite" aria-atomic="true">
+            <span id="clockBadge">Hora simulada 00:00</span>
+            <strong id="liveStatus">Sensores inicializando...</strong>
+            <span id="dbCount">0 registros no PostgreSQL simulado</span>
+          </div>
+
+          <div class="metrics-grid" aria-label="Indicadores em tempo real">
+            <article class="metric-module" data-metric="soilTemp">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">TS</span>
+                <span id="soilTempStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Temperatura do solo</h3>
+              <strong id="soilTempValue">--</strong>
+              <div class="meter"><span id="soilTempBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="soilHumidity">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">US</span>
+                <span id="soilHumidityStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Umidade do solo</h3>
+              <strong id="soilHumidityValue">--</strong>
+              <div class="meter"><span id="soilHumidityBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="airTemp">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">TA</span>
+                <span id="airTempStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Temperatura ambiente</h3>
+              <strong id="airTempValue">--</strong>
+              <div class="meter"><span id="airTempBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="airHumidity">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">UA</span>
+                <span id="airHumidityStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Umidade do ar</h3>
+              <strong id="airHumidityValue">--</strong>
+              <div class="meter"><span id="airHumidityBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="water">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">CH</span>
+                <span id="waterStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Consumo de água</h3>
+              <strong id="waterValue">--</strong>
+              <div class="meter"><span id="waterBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="fertility">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">FS</span>
+                <span id="fertilityStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Fertilidade</h3>
+              <strong id="fertilityValue">--</strong>
+              <div class="meter"><span id="fertilityBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="plantHealth">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">SP</span>
+                <span id="plantHealthStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Saúde da plantação</h3>
+              <strong id="plantHealthValue">--</strong>
+              <div class="meter"><span id="plantHealthBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="biodiversity">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">IB</span>
+                <span id="biodiversityStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Biodiversidade</h3>
+              <strong id="biodiversityValue">--</strong>
+              <div class="meter"><span id="biodiversityBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="preservation">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">PA</span>
+                <span id="preservationStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Preservação ambiental</h3>
+              <strong id="preservationValue">--</strong>
+              <div class="meter"><span id="preservationBar"></span></div>
+            </article>
+            <article class="metric-module" data-metric="sustainableProductivity">
+              <div class="metric-module__top">
+                <span class="metric-icon" aria-hidden="true">PS</span>
+                <span id="sustainableProductivityStatus" class="metric-status">Aguardando</span>
+              </div>
+              <h3>Produtividade sustentável</h3>
+              <strong id="sustainableProductivityValue">--</strong>
+              <div class="meter"><span id="sustainableProductivityBar"></span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="balance-section" aria-labelledby="balance-title">
+          <div class="balance-copy">
+            <p class="eyebrow">Balança de sustentabilidade</p>
+            <h2 id="balance-title">Produção e preservação sob o mesmo peso</h2>
+            <p id="balanceMessage">
+              Aguardando histórico suficiente para medir equilíbrio sustentável.
+            </p>
+            <button id="diagnosticButton" type="button">Gerar diagnóstico</button>
+          </div>
+
+          <div class="balance-machine" aria-live="polite" aria-atomic="true">
+            <div class="balance-score">
+              <span>Índice de equilíbrio</span>
+              <strong id="balanceScore">--</strong>
+            </div>
+            <div class="balance-values">
+              <span>Produção <strong id="productionSideValue">--</strong></span>
+              <span>Preservação <strong id="preservationSideValue">--</strong></span>
+            </div>
+            <div class="scale-labels">
+              <span>Produção</span>
+              <span>Preservação</span>
+            </div>
+            <div class="scale-frame" aria-hidden="true">
+              <div id="scaleBeam" class="scale-beam">
+                <span class="scale-pan scale-pan--left"></span>
+                <span class="scale-pan scale-pan--right"></span>
+              </div>
+              <span class="scale-base"></span>
+            </div>
+            <strong id="balanceState">Análise operacional</strong>
+            <div class="balance-actions" aria-label="Ações da Balança AgroBalance">
+              <button type="button" data-scale-action="producao">Aumentar produção</button>
+              <button type="button" data-scale-action="expandir">Expandir área produtiva</button>
+              <button type="button" data-scale-action="agua">Reduzir consumo de água</button>
+              <button type="button" data-scale-action="preservar">Preservar área nativa</button>
+              <button type="button" data-scale-action="fertilidade">Recuperar fertilidade</button>
+              <button type="button" data-scale-action="biodiversidade">Proteger biodiversidade</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-grid">
+          <article id="mapa" class="panel map-panel" aria-labelledby="map-title">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Mapa inteligente</p>
+                <h2 id="map-title">Setores monitorados</h2>
+              </div>
+              <button class="ghost-button" id="resetSector" type="button">Todos</button>
+            </div>
+
+            <div class="property-map" role="group" aria-label="Mapa interativo da propriedade">
+              <button class="sector sector--north" type="button" data-sector="Área produtiva norte">
+                <strong>Setor A — Plantação Principal</strong>
+                <span>Culturas comerciais + sensores de solo</span>
+              </button>
+              <button class="sector sector--south" type="button" data-sector="Área produtiva sul">
+                <strong>Setor E — Área de Irrigação</strong>
+                <span>Irrigação e manejo de água</span>
+              </button>
+              <button class="sector sector--preserve" type="button" data-sector="Área de preservação">
+                <strong>Setor B — Área de Preservação</strong>
+                <span>Vegetação nativa e proteção do solo</span>
+              </button>
+              <button class="sector sector--springs" type="button" data-sector="Nascentes">
+                <strong>Setor C — Nascente</strong>
+                <span>Proteção hídrica</span>
+              </button>
+              <button class="sector sector--reservoirs" type="button" data-sector="Reservatórios">
+                <strong>Setor F — Estação de Sensores</strong>
+                <span>Coleta horária de dados</span>
+              </button>
+              <button class="sector sector--weather" type="button" data-sector="Estação meteorológica">
+                <strong>Setor D — Zona de Biodiversidade</strong>
+                <span>Vida no solo e corredores ecológicos</span>
+              </button>
+            </div>
+            <aside id="sectorDetails" class="sector-details" aria-live="polite">
+              <strong>Todos os setores</strong>
+              <p>Selecione uma área do mapa para ver um resumo operacional do setor.</p>
+            </aside>
+          </article>
+
+          <article class="panel chart-panel" aria-labelledby="chart-title">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Histórico e tendências</p>
+                <h2 id="chart-title">Análise temporal dos sensores</h2>
+              </div>
+              <div class="segmented" role="tablist" aria-label="Período de análise">
+                <button class="active" type="button" data-period="24" role="tab">24h</button>
+                <button type="button" data-period="168" role="tab">Semana</button>
+                <button type="button" data-period="720" role="tab">Mês</button>
+              </div>
+            </div>
+            <canvas id="trendChart" width="920" height="420" aria-label="Gráfico nativo de água, fertilidade, biodiversidade e produtividade"></canvas>
+            <div class="chart-legend" aria-label="Legenda do gráfico">
+              <span class="legend-water">Água</span>
+              <span class="legend-fertility">Fertilidade</span>
+              <span class="legend-biodiversity">Biodiversidade</span>
+              <span class="legend-production">Produtividade</span>
+            </div>
+          </article>
+        </section>
+
+        <section id="simulador" class="decision-lab" aria-labelledby="sim-title">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Simulador de Cenários Agrícolas</p>
+              <h2 id="sim-title">Cenários alteram produção, água, solo e vida</h2>
+            </div>
+            <button id="newEventButton" type="button">Trocar evento</button>
+          </div>
+
+          <div class="scenario-grid" aria-label="Cenários agrícolas simulados">
+            <button type="button" data-scenario="seca" aria-pressed="false">Cenário de seca</button>
+            <button type="button" data-scenario="altaProducao" aria-pressed="false">Cenário de alta produção</button>
+            <button type="button" data-scenario="soloDegradado" aria-pressed="false">Cenário de solo degradado</button>
+            <button type="button" data-scenario="recuperacao" aria-pressed="false">Cenário de recuperação ambiental</button>
+            <button type="button" data-scenario="equilibrado" aria-pressed="false">Cenário equilibrado</button>
+          </div>
+
+          <div class="simulator-status" aria-live="polite">
+            <article>
+              <span>Cenário ativo</span>
+              <strong id="activeScenarioName">Nenhum cenário aplicado</strong>
+            </article>
+            <article>
+              <span>O que mudou</span>
+              <strong id="scenarioSummary">Primeiro escolha um cenário agrícola.</strong>
+            </article>
+            <article>
+              <span>Recomendação da IA</span>
+              <strong id="scenarioRecommendation">Depois escolha uma resposta do produtor.</strong>
+            </article>
+          </div>
+
+          <div class="event-board">
+            <article class="event-card" aria-live="polite">
+              <span>Evento atual</span>
+              <h3 id="eventTitle">Período de seca</h3>
+              <p id="eventDescription">A umidade do solo cai e a irrigação pressiona os reservatórios.</p>
+            </article>
+            <article class="action-panel">
+              <span>Escolha uma resposta do produtor</span>
+              <div id="actionList" class="action-list" aria-label="Ações disponíveis"></div>
+            </article>
+            <article class="decision-impact">
+              <span>Resultado da última decisão</span>
+              <p id="decisionResult">Escolha uma ação para recalcular o equilíbrio.</p>
+              <ul id="simImpactList" class="sim-impact-list" aria-label="Impactos da simulação"></ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="dados" class="data-grid">
+          <article class="panel flow-panel" aria-labelledby="flow-title">
+            <p class="eyebrow">Como a informação percorre a fazenda</p>
+            <h2 id="flow-title">Como os dados chegam até a IA?</h2>
+            <div class="flow-steps">
+              <button type="button" class="flow-step active" data-flow="sensor">Sensor IoT</button>
+              <button type="button" class="flow-step" data-flow="postgres">PostgreSQL</button>
+              <button type="button" class="flow-step" data-flow="engine">Motor de Análise AgroBalance AI</button>
+              <button type="button" class="flow-step" data-flow="decision">Decisão do Produtor</button>
+            </div>
+            <p id="flowExplanation" class="flow-explanation">
+              Sensores coletam dados do ambiente rural, como solo, clima, água, fertilidade e biodiversidade.
+            </p>
+          </article>
+
+          <article class="panel alerts-panel" aria-labelledby="alerts-title">
+            <p class="eyebrow">Alertas e recomendações</p>
+            <h2 id="alerts-title">Motor AgroBalance AI</h2>
+            <div id="diagnosticText" class="diagnostic-text" aria-live="polite">
+              Clique em Gerar diagnóstico para receber recomendações baseadas no histórico recente.
+            </div>
+            <ul id="alertList" class="alert-list" aria-label="Lista de alertas"></ul>
+          </article>
+        </section>
+
+        <section id="historico" class="history-section" aria-labelledby="history-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Histórico Inteligente</p>
+              <h2 id="history-title">Linha do tempo dos dados enviados pelos sensores</h2>
+            </div>
+            <button id="toggleTimelineButton" type="button">Ocultar histórico</button>
+          </div>
+          <span id="timelineStatus">Atualização automática ativa</span>
+          <ol id="timelineList" class="timeline-list" aria-live="polite"></ol>
+        </section>
+
+        <section class="assistant-report-grid">
+          <article class="panel assistant-panel" aria-labelledby="assistant-title">
+            <p class="eyebrow">Assistente AgroBalance</p>
+            <h2 id="assistant-title">Perguntas rápidas para a IA simulada</h2>
+            <div class="assistant-questions">
+              <button type="button" data-question="solo">Como está o solo?</button>
+              <button type="button" data-question="irrigar">Devo irrigar agora?</button>
+              <button type="button" data-question="equilibrio">A fazenda está equilibrada?</button>
+              <button type="button" data-question="setor">Qual setor precisa de atenção?</button>
+            </div>
+            <p id="assistantAnswer" class="assistant-answer" aria-live="polite">
+              Selecione uma pergunta para receber uma resposta baseada nos indicadores atuais.
+            </p>
+          </article>
+
+          <article class="panel report-panel" aria-labelledby="report-title">
+            <p class="eyebrow">Relatório final da fazenda</p>
+            <h2 id="report-title">Resumo operacional do ciclo atual</h2>
+            <button id="farmReportButton" type="button">Gerar Relatório da Fazenda</button>
+            <div id="farmReport" class="farm-report" aria-live="polite">
+              O relatório será montado com status geral, índice AgroBalance,
+              principal risco, recomendação, setor crítico e setor mais preservado.
+            </div>
+          </article>
+        </section>
+
+        <section class="technical-section" aria-labelledby="tech-title">
+          <p class="eyebrow">PostgreSQL + Motor de Análise AgroBalance AI</p>
+          <h2 id="tech-title">Banco de dados, histórico e análise responsável</h2>
+          <div class="technical-grid">
+            <article>
+              <h3>Por que PostgreSQL?</h3>
+              <p>
+                O PostgreSQL é gratuito, confiável, escalável e organizado. Na plataforma,
+                ele representa o banco ideal para armazenar leituras históricas de sensores
+                por hora, dia, semana, mês e ano.
+              </p>
+            </article>
+            <article>
+              <h3>Como o histórico ajuda?</h3>
+              <p>
+                Cada sensor pode enviar uma leitura a cada hora. Esse registro permite montar
+                gráficos, comparar períodos, identificar desperdícios e orientar decisões com
+                base em dados reais da propriedade.
+              </p>
+            </article>
+            <article>
+              <h3>O que a IA analisa?</h3>
+              <p>
+                O Motor de Análise AgroBalance AI não funciona como mágica: ele compara
+                tendências, padrões, riscos ambientais, queda de fertilidade, consumo de água,
+                biodiversidade e equilíbrio entre produtividade e preservação.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>AGROBALANCE AI</strong>
+          <span>Projeto Agrinho 2026 desenvolvido com HTML5, CSS3 e JavaScript puro.</span>
+        </div>
+        <div class="copyright-box" aria-label="Dados de autoria e copyright">
+          <span>&copy; 2026 Arthur Costa Marcondes. Todos os direitos reservados.</span>
+          <span>Colégio Estadual Padre Cláudio Morelli.</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
