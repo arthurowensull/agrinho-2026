@@ -289,30 +289,6 @@ O objetivo visual é fazer o site parecer uma plataforma profissional de monitor
 
 ---
 
-## Publicação
-
-O projeto pode ser publicado como site estático pelo GitHub Pages ou pela Vercel.
-
-### GitHub Pages
-
-1. Acesse as configurações do repositório.
-2. Entre na seção **Pages**.
-3. Selecione a branch principal.
-4. Escolha a pasta raiz do projeto.
-5. Salve e aguarde a publicação.
-6. Copie o link gerado.
-7. Adicione o link na seção **About** do repositório.
-
-### Vercel
-
-1. Importe o repositório na Vercel.
-2. Mantenha a configuração padrão para site estático.
-3. Publique o projeto.
-4. Copie o link gerado.
-5. Adicione o link na seção **About** do repositório.
-
----
-
 ## Requisitos Atendidos da Rubrica
 
 * HTML, CSS e JavaScript separados.
